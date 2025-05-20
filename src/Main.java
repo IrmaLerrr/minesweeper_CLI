@@ -24,9 +24,9 @@ class MineField {
     private static final char SAFE = '.';
     private static final int[][] directions = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
-    private int rows;
-    private int columns;
-    private char[][] arr;
+    private final int rows;
+    private final int columns;
+    private final char[][] arr;
 
     MineField(int rows, int columns) {
         this.rows = rows;
