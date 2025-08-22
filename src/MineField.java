@@ -13,11 +13,11 @@ public class MineField {
         addNumbersOfMines();
     }
 
-    public MineFieldCell getCell(int x, int y){
+    public MineFieldCell getCell(int x, int y) {
         if (!isValidCoordinate(x, y)) {
             throw new IndexOutOfBoundsException("Invalid coordinates: " + x + " " + y);
         }
-        return arr[y-1][x-1];
+        return arr[y - 1][x - 1];
     }
 
     public boolean isValidCoordinate(int x, int y) {
@@ -25,31 +25,33 @@ public class MineField {
     }
 
     public void printMineField() {
-        System.out.print("  | ");
+        char vbar = '|';
+        char hbar = '-';
+        System.out.print("  " + vbar + " ");
         for (int i = 0; i < columns; i++) {
-            System.out.printf("%X ", i+1);
+            System.out.printf("%X ", i + 1);
         }
-        System.out.println("|");
+        System.out.println(vbar);
 
-        System.out.print("— | ");
+        System.out.print(hbar + " " + vbar);
         for (int i = 0; i < columns; i++) {
-            System.out.print("— ");
+            System.out.print(" " + hbar);
         }
-        System.out.println("| —");
+        System.out.println(" " + vbar + " " + hbar);
 
         for (int i = 0; i < rows; i++) {
-            System.out.printf("%X | ", i+1);
+            System.out.printf("%X %c ", i + 1, vbar);
             for (int j = 0; j < columns; j++) {
                 System.out.print(arr[i][j].getDesignation() + " ");
             }
-            System.out.println("|");
+            System.out.println(vbar);
         }
 
-        System.out.print("— | ");
+        System.out.print(hbar + " " + vbar + " ");
         for (int i = 0; i < columns; i++) {
-            System.out.print("— ");
+            System.out.print(hbar + " ");
         }
-        System.out.println("| —");
+        System.out.println(vbar + " " + hbar);
     }
 
     public void addMines(int count) {
