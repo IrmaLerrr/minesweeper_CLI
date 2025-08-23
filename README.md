@@ -29,7 +29,7 @@ A classic Minesweeper game built with Java, designed to run right in your termin
 ## How to Play
 
 1.  **Start the game:** Run the program, and you'll be asked to define your playing field.
-    > *Example: Enter `5 5` for a 5x5 grid, then `5` for 5 mines.*
+    * *Example: Enter `5 5` for a 5x5 grid, then `5` for 5 mines.*
 
 2.  **Make your moves:**
     *   To **explore** a cell, type its coordinates, type `free` after the coordinates (e.g., `2 3 free`).
